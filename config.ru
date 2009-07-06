@@ -1,2 +1,2 @@
-require 'translate_twtter'
+require "translate_twitter"
 run Sinatra::Application
