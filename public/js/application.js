@@ -8,6 +8,6 @@ function get_update() {
 //}
 
 //$(document).ready(function() {
- setInterval("get_update()", 15000);
+ setInterval("get_update()", 20000);
   
 //}
