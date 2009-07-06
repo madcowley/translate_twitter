@@ -12,4 +12,6 @@ p {
 p img {
   margin-right: 5px;
   vertical-align: middle;
+  height: 48px;
+  width: 48px;
 }
