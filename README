@@ -1,0 +1,17 @@
+translate_twitter is a Sinatra app that will return the results of a twitter search, with translations.
+
+At the moment, it defaults to using the #honduras search term, and only translates into English; it was 
+originally written so I could understand the tweets on the #honduras feed, most of which are in Spanish.
+
+Translations are based on the google translation api, with code copped from http://ruby.geraldbauer.ca/google-translation-api.html
+
+Twitter api courtesy of http://github.com/jnunemaker/twitter/tree/master
+
+Thanks to http://github.com/threadhead/sinatra-tailer/tree/master for the basics of a sinatra structure.
+
+Tweets auto-linkified from this snippet: http://snippets.dzone.com/posts/show/7455
+
+Oh, and Sinatra is pretty cool, too: http://www.sinatrarb.com/
+
+TODO: add a way to specify a search term, and choose your destination language.  And other stuff that would make it cooler.
+
