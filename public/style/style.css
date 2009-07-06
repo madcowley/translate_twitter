@@ -1,7 +1,15 @@
 body {
   width: 960px;
   padding: 10px;
+  background: #acacac;
 }
 p {
   margin: 10px;
+  vertical-align: middle;
+  background: #FFF;
+  padding: 4px;
+}
+p img {
+  margin-right: 5px;
+  vertical-align: middle;
 }

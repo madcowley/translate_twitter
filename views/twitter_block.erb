@@ -1,19 +1,20 @@
 <%  
-@search_term = '#honduras'
 search = Twitter::Search.new(session['search_term'])
-text = []
-  search.since(session['last_id']).each do |r| 
-    begin
-      if r.iso_language_code == 'en'
-       text <<  "<p><a href='http://twitter.com/#{r.from_user}'>#{r.from_user}</a>  #{linkify(r.text)}</p>"
-      else
-        text << "<p><a href='http://twitter.com/#{r.from_user}'>#{r.from_user}</a>  #{linkify(translate(r.text, 'en', r.iso_language_code))}</p>"
-      end
-      session['last_id'] = r.id if r.id > session['last_id'].to_i
-    rescue StandardError => e
-      puts "error #{e.message}"
+tweets = []
+session['last_id'] = 0
+search.since(session['last_id']).each do |r| 
+  begin
+    if r.iso_language_code == 'en'
+      tweet_text = "#{linkify(r.text)}"
+    else
+      tweet_text = "#{linkify(translate(r.text, 'en', r.iso_language_code))}"
     end
+    tweets <<  "<p><image src='#{r.profile_image_url}' /><a href='http://twitter.com/#{r.from_user}'>#{r.from_user}</a>  #{tweet_text} <cite>#{r.created_at}</cite></p>"
+    session['last_id'] = r.id if r.id > session['last_id'].to_i
+  rescue StandardError => e
+    puts "error #{e.message}"
   end
-text.join('<br />')
+end
+tweets.join('<br />')
 %>
-<%= text %>
+<%= tweets %>
