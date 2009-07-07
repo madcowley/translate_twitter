@@ -9,5 +9,9 @@ function get_update() {
 
 //$(document).ready(function() {
  setInterval("get_update()", 20000);
-  
+ google.load("language", "1");
+ google.setOnLoadCallback(brand);
+ function brand() {
+  google.language.getBranding('branding');
+}
 //}

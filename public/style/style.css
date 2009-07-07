@@ -15,3 +15,12 @@ p img {
   height: 48px;
   width: 48px;
 }
+#explanation {
+  background: #FFF;
+  margin-bottom: 100px;
+}
+
+#search_form {
+  margin-bottom: 100px;
+  text-align: center;
+}
