@@ -8,7 +8,7 @@ function get_update() {
 //}
 
 //$(document).ready(function() {
- setInterval("get_update()", 20000);
+ setInterval("get_update()", 120000);
  google.load("language", "1");
  google.setOnLoadCallback(brand);
  function brand() {
